@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div id ="header">
+        <div class="container">
+            <nav>
+                <img src="logo1.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Computer Science & Engineering Student | Aspiring Python Developer</p>
+                <h1>Hey! I am<br><span>Keerthana PB</span></h1>
+            </div>
+        </div>
+    </div>
+    <!-- -----------about---- -->
+     <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="about1.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi! I’m Keerthana P B, a Computer Science and Engineering student at St. Joseph’s College of Engineering and Technology, Palai. I'm passionate about full-stack development with Python and Django, and I love turning ideas into clean, user-friendly web projects.I’ve gained hands-on experience through internships, workshops, and college tech events, always eager to learn and grow. When I’m not coding, you’ll find me journaling, exploring new ideas, or enjoying quiet creative moments</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming languages</span><br>Python,C,Java,JavaScript(basics)</li> 
+                        <li><span>Web development</span><br>HTML,CSS,Django</li> 
+                        <li><span>Database & tools</span><br>MySQL,VSCode</li> 
+                        <li><span>Concepts</span><br>Object-oriented programming,Data structures and algorithms</li> 
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023 - present</span><br>IEEE member,IEEE Computer Society member</li> 
+                        <li><span>May 2025 - June 2025</span><br>Python intern - Rogersoft technologies</li> 
+                        <li><span>July 2024 - August 2024</span><br>Python intern - Elewayte</li> 
+                        
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>September 2023 - present</span><br>B Tech in CSE from St. Joseph's College of Engineering and Technology, Palai</li> 
+                        <li><span>2009 - March 2023</span><br>Chavara Public School, Pala</li> 
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ----------projects------- -->
+<div id="projects">
+    <div class="container">
+       <h1 class="sub-title">My Projects</h1>
+       <div class="projects-list">
+            <div>
+                <h2>E Mail Vaildation</h2>
+                <p>Tech Used: Python, String Handling, Conditional Logic<br>Built a Python-based system to validate email IDs. It checks the correct use of the @ symbol, ensures valid characters in the local part, and verifies the domain structure and TLD (like .com, .org, .edu). The program handles multiple inputs and gives clear feedback on whether each email is valid.</p>
+                
+            </div>
+            <div>
+                <h2>HR Analytics</h2>
+                <p>Tech Used: Python, Pandas, Matplotlib, Seaborn<br>Analyzed employee data focusing on gender distribution, salary trends, and pay gaps across departments and locations. I cleaned and prepared the data, performed exploratory analysis, and visualized insights using Seaborn and Matplotlib. Key findings included department-wise pay gaps, rating patterns, and salary comparisons segmented by gender and location.</p>
+                
+            </div>
+            <div>
+                <h2>User Management System</h2>
+                <p>Tech Used: Python, Django, SQLite, HTML, CSS<br>Built a Django-based web app for user registration, login, and data management. Included an admin dashboard to update or delete user records securely. Used Django ORM for CRUD operations, applied form validations, CSRF protection, and designed a clean UI using HTML templating.</p>
+                
+            </div>
+       </div>
+    </div>
+</div>
+<!-- --------contact----- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>keerthanapb685@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>6282225342</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/keerthana-p-b-b52b462a2"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://x.com/kethkeeee?t=SefMH9tuZckHUUUJUtEXng&s=09"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://github.com/kethkee"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+</body>
+</html>
