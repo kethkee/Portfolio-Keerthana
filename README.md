@@ -1,4 +1,4 @@
-![ClipWindowsGIF](https://github.com/user-attachments/assets/cc3de4ed-83b6-476c-a592-c3c329001b5e)# Portfolio-Keerthana PB
+# Portfolio-Keerthana PB
 
 ## Overview
 This is my personal portfolio website showcasing my skills, projects and experience as a Computer Science & Engineering student
